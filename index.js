@@ -8,7 +8,7 @@ var ip = require('ip');
 var app = http.createServer();					//#Khởi tạo một chương trình mạng (app)
 var io = socketio(app);								//#Phải khởi tạo io sau khi tạo app!
 app.listen(PORT);										// Cho socket server (chương trình mạng) lắng nghe ở port 3484
-console.log("Server nodejs chay tai dia chi: " + ip.address() + ":" + PORT)
+console.log("Server chay tai dia chi: " + ip.address() + ":" + PORT)
  
 //Khi có mệt kết nối được tạo giữa Socket Client và Socket Server
 io.on('connection', function(socket) {	
